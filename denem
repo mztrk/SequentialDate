@@ -1,0 +1,13 @@
+
+seqMonth(period, monthAddInteger(period, monthForward))
+
+
+function(from, to, by = 1){
+  fromDate <- ymd(from %+% "01")
+  toDate <- ymd(to %+% "01")
+  s <- seq(fromDate, toDate, by = by %+% " months")
+  return(format(s, "%Y%m"))
+}
+
+
+
